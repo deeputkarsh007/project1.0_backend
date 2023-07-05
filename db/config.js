@@ -1,3 +1,4 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
-mongoose.connect("mongodb://localhost:27017/e_comm");
+mongoose.connect(`${process.env.db_url}`);
